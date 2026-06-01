@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Symptom analysis results — view your health assessment and recommended actions.">
+  <title>Results | Healthcare+</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="logo">Healthcare+</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="symptom.html">Symptom</a>
+    <a href="remedy.html">Remedy</a>
+    <a href="emergency.html">Emergency</a>
+    <a href="care.html">Care</a>
+    <a href="reminder.html">Reminder</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero" style="background: linear-gradient(135deg, var(--accent), var(--primary));">
+  <h2>📋 Analysis Results</h2>
+  <p>Your symptom assessment and recommended actions</p>
+</section>
+
+<!-- RESULT CARD -->
+<div class="center">
+  <div class="result-card fade-in">
+    <h2>Symptom Analysis</h2>
+    <p id="output"></p>
+
+    <div style="margin-top: 24px;">
+      <a href="index.html">
+        <button class="btn-secondary" id="btn-back-home">← Back to Home</button>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK ACTIONS -->
+<div class="section-header" style="text-align: center;">
+  <h2>What to do next?</h2>
+</div>
+
+<div class="grid" style="max-width: 700px; margin: 0 auto;">
+  <a href="remedy.html" class="card">
+    <span class="card-icon">🌿</span>
+    <span class="card-title">Explore Remedies</span>
+    <span class="card-desc">Find home remedies for your condition</span>
+  </a>
+  <a href="emergency.html" class="card">
+    <span class="card-icon">🚑</span>
+    <span class="card-title">Emergency Help</span>
+    <span class="card-desc">Contact emergency services if needed</span>
+  </a>
+  <a href="reminder.html" class="card">
+    <span class="card-icon">⏰</span>
+    <span class="card-title">Set Reminder</span>
+    <span class="card-desc">Don't forget your medication</span>
+  </a>
+</div>
+
+<!-- BOTTOM NAVIGATION -->
+<nav class="bottom-nav" role="navigation" aria-label="Bottom navigation">
+  <a href="index.html">
+    <span class="nav-icon">🏠</span>
+    Home
+  </a>
+  <a href="symptom.html">
+    <span class="nav-icon">🩺</span>
+    Symptom
+  </a>
+  <a href="remedy.html">
+    <span class="nav-icon">🌿</span>
+    Remedy
+  </a>
+  <a href="emergency.html">
+    <span class="nav-icon">🚑</span>
+    Emergency
+  </a>
+  <a href="care.html">
+    <span class="nav-icon">👶</span>
+    Care
+  </a>
+  <a href="reminder.html">
+    <span class="nav-icon">⏰</span>
+    Reminder
+  </a>
+</nav>
+
+<script src="script.js"></script>
+
+</body>
+</html>

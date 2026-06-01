@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Set medicine reminders with Healthcare+ — never miss your medication schedule.">
+  <title>Medicine Reminder | Healthcare+</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="logo">Healthcare+</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="symptom.html">Symptom</a>
+    <a href="remedy.html">Remedy</a>
+    <a href="emergency.html">Emergency</a>
+    <a href="care.html">Care</a>
+    <a href="reminder.html" class="active">Reminder</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <h2>⏰ Medicine Reminder</h2>
+  <p>Never miss your medication — set smart reminders</p>
+</section>
+
+<!-- REMINDER FORM -->
+<div class="center">
+  <div class="reminder-form">
+    <label for="time">⏰ Select Time</label>
+    <input type="time" id="time" aria-label="Select reminder time">
+
+    <button onclick="setReminder()" id="btn-set-reminder">Set Reminder</button>
+
+    <p id="msg"></p>
+  </div>
+</div>
+
+<!-- BOTTOM NAVIGATION -->
+<nav class="bottom-nav" role="navigation" aria-label="Bottom navigation">
+  <a href="index.html">
+    <span class="nav-icon">🏠</span>
+    Home
+  </a>
+  <a href="symptom.html">
+    <span class="nav-icon">🩺</span>
+    Symptom
+  </a>
+  <a href="remedy.html">
+    <span class="nav-icon">🌿</span>
+    Remedy
+  </a>
+  <a href="emergency.html">
+    <span class="nav-icon">🚑</span>
+    Emergency
+  </a>
+  <a href="care.html">
+    <span class="nav-icon">👶</span>
+    Care
+  </a>
+  <a href="reminder.html" class="active" aria-current="page">
+    <span class="nav-icon">⏰</span>
+    Reminder
+  </a>
+</nav>
+
+<script src="script.js"></script>
+
+</body>
+</html>

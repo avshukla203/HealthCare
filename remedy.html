@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore diseases and home remedies. Find natural cures for common conditions with Healthcare+.">
+  <title>Disease Explorer | Healthcare+</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-dark">
+
+<!-- HEADER -->
+<div class="header">
+  <h1>🏥 Disease Explorer</h1>
+  <input class="search-box" id="search" placeholder="Search conditions..." onkeyup="searchDisease()" aria-label="Search diseases">
+</div>
+
+<!-- COMMON CONDITIONS -->
+<h2>🩺 Common Conditions</h2>
+<div class="scroll" role="list">
+  <div class="card" onclick="openModal('Fever')" role="listitem" tabindex="0">🌡️ Fever</div>
+  <div class="card" onclick="openModal('Cold')" role="listitem" tabindex="0">🤧 Cold</div>
+  <div class="card" onclick="openModal('Cough')" role="listitem" tabindex="0">😷 Cough</div>
+</div>
+
+<!-- THROAT -->
+<h2>😷 Throat</h2>
+<div class="scroll" role="list">
+  <div class="card" onclick="openModal('Sore Throat')" role="listitem" tabindex="0">🗣️ Sore Throat</div>
+  <div class="card" onclick="openModal('Tonsillitis')" role="listitem" tabindex="0">😮 Tonsillitis</div>
+</div>
+
+<!-- DIGESTIVE -->
+<h2>🤢 Digestive</h2>
+<div class="scroll" role="list">
+  <div class="card" onclick="openModal('Acidity')" role="listitem" tabindex="0">🔥 Acidity</div>
+  <div class="card" onclick="openModal('Diarrhea')" role="listitem" tabindex="0">💧 Diarrhea</div>
+  <div class="card" onclick="openModal('Gas')" role="listitem" tabindex="0">💨 Gas</div>
+</div>
+
+<!-- PERIOD RELATED -->
+<h2>🩸 Period Related</h2>
+<div class="scroll" role="list">
+  <div class="card" onclick="openModal('Cramps')" role="listitem" tabindex="0">😣 Cramps</div>
+  <div class="card" onclick="openModal('Irregular Periods')" role="listitem" tabindex="0">📅 Irregular Periods</div>
+</div>
+
+<!-- SERIOUS DISEASES -->
+<h2>❤️ Serious Diseases</h2>
+<div class="scroll" role="list">
+  <div class="card" onclick="openModal('Heart Disease')" role="listitem" tabindex="0">🫀 Heart Disease</div>
+  <div class="card" onclick="openModal('Stroke')" role="listitem" tabindex="0">🧠 Stroke</div>
+  <div class="card" onclick="openModal('Cancer')" role="listitem" tabindex="0">🎗️ Cancer</div>
+  <div class="card" onclick="openModal('Diabetes')" role="listitem" tabindex="0">🩸 Diabetes</div>
+</div>
+
+<!-- MODAL (preserved structure) -->
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="modal-content">
+    <h2 id="title"></h2>
+    <p id="info"></p>
+    <button onclick="closeModal()" id="btn-close-modal">Close</button>
+  </div>
+</div>
+
+<!-- BOTTOM NAVIGATION -->
+<nav class="bottom-nav" role="navigation" aria-label="Bottom navigation">
+  <a href="index.html">
+    <span class="nav-icon">🏠</span>
+    Home
+  </a>
+  <a href="symptom.html">
+    <span class="nav-icon">🩺</span>
+    Symptom
+  </a>
+  <a href="remedy.html" class="active" aria-current="page">
+    <span class="nav-icon">🌿</span>
+    Remedy
+  </a>
+  <a href="emergency.html">
+    <span class="nav-icon">🚑</span>
+    Emergency
+  </a>
+  <a href="care.html">
+    <span class="nav-icon">👶</span>
+    Care
+  </a>
+  <a href="reminder.html">
+    <span class="nav-icon">⏰</span>
+    Reminder
+  </a>
+</nav>
+
+<script>
+
+/* DATA — preserved exactly from original */
+function getData(d){
+
+let data = {
+"Fever":"Drink fluids, rest, take light food.",
+"Cold":"Ginger tea, steam inhalation, honey.",
+"Cough":"Honey + ginger, warm water.",
+"Sore Throat":"Salt water gargle, honey tea.",
+"Tonsillitis":"Warm liquids, rest.",
+"Acidity":"Cold milk, avoid spicy food.",
+"Gas":"Ajwain, warm water.",
+"Diarrhea":"ORS, hydration.",
+"Cramps":"Heating pad, light exercise.",
+"Irregular Periods":"Healthy diet, reduce stress.",
+
+"Heart Disease":"⚠️ Serious condition. Maintain diet, exercise, consult doctor.",
+"Stroke":"⚠️ Emergency condition. Immediate medical help required.",
+"Cancer":"⚠️ Requires professional treatment. No home remedy.",
+"Diabetes":"Healthy diet, control sugar, exercise."
+};
+
+return data[d] || "Consult doctor";
+}
+
+/* OPEN MODAL — preserved */
+function openModal(name){
+document.getElementById("modal").style.display="flex";
+document.getElementById("title").innerText=name;
+document.getElementById("info").innerText=getData(name);
+}
+
+/* CLOSE — preserved */
+function closeModal(){
+document.getElementById("modal").style.display="none";
+}
+
+/* SEARCH — preserved */
+function searchDisease(){
+let input=document.getElementById("search").value.toLowerCase();
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(c=>{
+c.style.display = c.innerText.toLowerCase().includes(input) ? "block":"none";
+});
+}
+
+</script>
+
+</body>
+</html>

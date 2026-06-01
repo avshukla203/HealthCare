@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Check your symptoms with Healthcare+ AI-powered symptom checker. Get instant health guidance.">
+  <title>Symptom Checker | Healthcare+</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="logo">Healthcare+</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="symptom.html" class="active">Symptom</a>
+    <a href="remedy.html">Remedy</a>
+    <a href="emergency.html">Emergency</a>
+    <a href="care.html">Care</a>
+    <a href="reminder.html">Reminder</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <h2>🩺 Symptom Checker</h2>
+  <p>Describe your symptoms and get instant AI-powered guidance</p>
+</section>
+
+<!-- SYMPTOM FORM -->
+<div class="center">
+  <div class="reminder-form" style="max-width: 560px;">
+    <label for="sym" style="align-self: flex-start;">What are you feeling?</label>
+    <input id="sym" placeholder="e.g., fever, headache, cough..." aria-label="Enter your symptoms">
+
+    <!-- Quick Symptom Tags -->
+    <div class="symptom-tags">
+      <span class="symptom-tag" onclick="document.getElementById('sym').value='fever'" tabindex="0">🌡️ Fever</span>
+      <span class="symptom-tag" onclick="document.getElementById('sym').value='cold'" tabindex="0">🤧 Cold</span>
+      <span class="symptom-tag" onclick="document.getElementById('sym').value='cough'" tabindex="0">😷 Cough</span>
+      <span class="symptom-tag" onclick="document.getElementById('sym').value='headache'" tabindex="0">🤕 Headache</span>
+      <span class="symptom-tag" onclick="document.getElementById('sym').value='stomach ache'" tabindex="0">🤢 Stomach</span>
+    </div>
+
+    <button onclick="go()" id="btn-check-symptoms">Check Symptoms</button>
+  </div>
+</div>
+
+<!-- BOTTOM NAVIGATION -->
+<nav class="bottom-nav" role="navigation" aria-label="Bottom navigation">
+  <a href="index.html">
+    <span class="nav-icon">🏠</span>
+    Home
+  </a>
+  <a href="symptom.html" class="active" aria-current="page">
+    <span class="nav-icon">🩺</span>
+    Symptom
+  </a>
+  <a href="remedy.html">
+    <span class="nav-icon">🌿</span>
+    Remedy
+  </a>
+  <a href="emergency.html">
+    <span class="nav-icon">🚑</span>
+    Emergency
+  </a>
+  <a href="care.html">
+    <span class="nav-icon">👶</span>
+    Care
+  </a>
+  <a href="reminder.html">
+    <span class="nav-icon">⏰</span>
+    Reminder
+  </a>
+</nav>
+
+<script src="script.js"></script>
+
+</body>
+</html>
